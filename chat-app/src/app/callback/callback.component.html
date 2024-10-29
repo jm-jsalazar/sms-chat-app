@@ -1,1 +1,6 @@
-<p>callback works!</p>
+<div *ngIf="user">
+    <h3>Welcome, {{ user.contact.firstName }} {{ user.contact.lastName }}</h3>
+    <p>Email: {{ user.email }}</p>
+    <p>Extension Number: {{ user.extensionNumber }}</p>
+  </div>
+  
