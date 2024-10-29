@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';  // Import this to enable routing
 import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { CallbackComponent } from './callback/callback.component';
 import { LoginComponent } from './login/login.component';
-import { RingcentralAuthService } from './ringcentral-auth.service';
 
 @NgModule({
   declarations: [
@@ -14,9 +15,10 @@ import { RingcentralAuthService } from './ringcentral-auth.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule  // Ensure routing module is added here
   ],
-  providers: [RingcentralAuthService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
