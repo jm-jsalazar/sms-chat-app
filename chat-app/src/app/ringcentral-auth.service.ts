@@ -1,24 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from './environment'
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class RingcentralAuthService {
-  private clientId = 'a7bfs2CIUbId6UWikfxHCC';
-  private clientSecret = '7IL4VgEp7kmekwsoWObbsXWkY7rz8jrZrcBYY4EpWpny';
-  private redirectUri = 'http://localhost:4200/callback'; // Adjust if necessary
+  private clientId = environment.clientId;  // Replace with actual client ID
+  private clientSecret = environment.clientSecret;  // Replace with actual client secret
+  private redirectUri = 'http://localhost:4200/callback';  // Your callback URL
   private authUrl = 'https://platform.ringcentral.com/restapi/oauth/authorize';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  // Function to handle login redirect
   login() {
     const url = `${this.authUrl}?response_type=code&client_id=${this.clientId}&redirect_uri=${encodeURIComponent(this.redirectUri)}`;
-    window.location.href = url;  // Redirect to RingCentral login
+    window.location.href = url;  // Redirect to RingCentral login modal
   }
 
-  // Function to handle the token exchange
   getToken(authCode: string) {
     const tokenUrl = 'https://platform.ringcentral.com/restapi/oauth/token';
     const body = new URLSearchParams({

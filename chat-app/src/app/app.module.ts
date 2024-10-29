@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';  // Required for ngModel binding
-import { HttpClientModule } from '@angular/common/http';  // Required for HTTP requests
-import { RouterModule } from '@angular/router';  // Import RouterModule for routing
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';  // Import the login component
-import { CallbackComponent } from './callback/callback.component';  // Import the callback component
+import { LoginComponent } from './login/login.component';
+import { CallbackComponent } from './callback/callback.component';
+import { RingcentralAuthService } from './ringcentral-auth.service';
 
 @NgModule({
   declarations: [
@@ -16,11 +16,10 @@ import { CallbackComponent } from './callback/callback.component';  // Import th
   ],
   imports: [
     BrowserModule,
-    FormsModule,  // Import FormsModule for two-way data binding
-    HttpClientModule,  // Import HttpClientModule for making HTTP requests
-    RouterModule.forRoot([])  // Import RouterModule and define your routes (empty array for now)
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]  // Bootstrap with the main app component
+  providers: [RingcentralAuthService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

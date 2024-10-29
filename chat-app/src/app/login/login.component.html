@@ -2,18 +2,8 @@
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="card p-4">
-          <h2 class="text-center">Login into your account</h2>
-          <form (submit)="onLogin()">
-            <div class="mb-3">
-              <label for="email" class="form-label">Email Address</label>
-              <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" placeholder="Enter email" required>
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" placeholder="Enter password" required>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Login Now</button>
-          </form>
+          <h2 class="text-center">Login to RingCentral</h2>
+          <button (click)="onLogin()" class="btn btn-primary w-100">Login with RingCentral</button>
         </div>
       </div>
     </div>

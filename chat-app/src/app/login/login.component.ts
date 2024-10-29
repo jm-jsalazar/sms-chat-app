@@ -7,13 +7,9 @@ import { RingcentralAuthService } from '../ringcentral-auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  email: string = '';
-  password: string = '';
-
   constructor(private authService: RingcentralAuthService) {}
 
   onLogin() {
-    // Trigger the RingCentral OAuth login
-    this.authService.login();
+    this.authService.login();  // Trigger login modal
   }
 }
