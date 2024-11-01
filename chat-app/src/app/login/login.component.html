@@ -1,11 +1,63 @@
-<div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="card p-4">
-          <h2 class="text-center">22Login to RingCentral</h2>
-          <button (click)="onLogin()" class="btn btn-primary w-100">Login with RingCentral</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  
+  <div class="section login-page container-fluid">
+    <div class="row aligh-item-center">
+      <div class="col-sm-3 p-0">
+        <div class="login-form">
+          <div class="logo">
+            <a href="index.html" class="">
+              <img src="https://jacobymeyers.com/assets/images/jacoby-meyers-logo.svg" width="260px" height="50px" alt="">
+            </a>
+          </div>
+          <div class="page-heading">
+            <h2>Login into your account</h2>
+          </div>
+          <form action="">
+            <div class="login-form-items">
+            <div class="items">
+              <label for="">Email Address</label>
+              <div class="input">
+                <input type="text" placeholder="Email Address">
+                <i class="ri-mail-line"></i>
+              </div>
+            </div>
+            <div class="items">
+              <label for="">Password</label>
+              <div class="input">
+                <input type="text" placeholder="Enter your password">
+                <i class="ri-lock-line"></i>
+              </div>
+            </div>
+            <div class="text-end forgot-password">
+              <a href="">Forgot Password?</a>
+            </div>
+            <div class="form-signin">
+              <button class="btn">Login Now</button>
+            </div>
+            <div class="or-option">
+              <p>or</p>
+            </div>
+            <div class="form-signup">
+              <button class="btn">Signup Now</button>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="login-extra">
+          <img src="/Users/jacobsalazar/Documents/GitHub/sms-chat-app/chat-app/src/app/login/assets/login.png" width="638px" height="638px" alt="Login Illustration">
         </div>
       </div>
     </div>
   </div>
   
+</body>
+</html>
